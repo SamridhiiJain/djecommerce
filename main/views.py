@@ -104,7 +104,7 @@ def slogin_view(request):
             return redirect('seller_login')
         login(request, user)
         return redirect('seller_dashboard')
-    return render(request, 'accounts/login_s.html')
+    return render(request, 'accounts/login_seller.html')
 
 def sregister_view(request):
     if request.method == 'POST':
