@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay Cards</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+            width: 100%; /* Full width */
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            filter: grayscale(100%); /* Make image black and white initially */
+        }
+        .card:hover img {
+            transform: scale(1.1); /* Magnify on hover */
+            filter: grayscale(0%); /* Remove grayscale on hover */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .card:hover .overlay {
+            opacity: 0; /* Fade overlay on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="https://via.placeholder.com/600x400" alt="Image 1">
+                <div class="overlay">
+                    <h5>Text Over Image 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="https://via.placeholder.com/600x400" alt="Image 2">
+                <div class="overlay">
+                    <h5>Text Over Image 2</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="https://via.placeholder.com/600x400" alt="Image 3">
+                <div class="overlay">
+                    <h5>Text Over Image 3</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="https://via.placeholder.com/600x400" alt="Image 4">
+                <div class="overlay">
+                    <h5>Text Over Image 4</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
