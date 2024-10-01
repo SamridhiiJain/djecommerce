@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'django_filters',
     'main',
-    'products',
+    'product',
     'cart',
 ]
 

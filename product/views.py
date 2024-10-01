@@ -50,7 +50,7 @@ def category_delete(request, slug):
 def product_list(request):
     return render(
         request, 'products/list.html',
-        context={'products': Product.objects.all()}
+        context={'products': Products.objects.all()}
     )
 
 def product_create(request):
@@ -73,7 +73,7 @@ def product_create(request):
 
 def product_edit(request,slug):
 
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Products, slug=slug)
     form = ProductForm(instance=product)
     if request.method =='POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -91,13 +91,13 @@ def product_edit(request,slug):
     )
 
 def product_delete(request,slug):
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Products, slug=slug)
     product.delete()
     messages.success(request, 'Product deleted successfully')
     return redirect('product_list')
 
 def product_detail(request,slug):
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Products, slug=slug)
     return render(
         request, 'products/detail.html',
         context={'product': product}
@@ -109,7 +109,7 @@ def category_product_list(request,category_slug):
         request, 'products/category_wise.html',
         context={
             'category': category,
-            'products' : Product.objects.filter(category=category)
+            'products' : Products.objects.filter(category=category)
         }
     )
 
@@ -121,14 +121,14 @@ def product_wishlist(request):
 
 @login_required
 def wishlist_add(request,slug):
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Products, slug=slug)
     Wishlist.objects.create(product=product, user=request.user)
     messages.success(request, 'Product added to wishlist')
     # back to same page
     return redirect(request.META.get('HTTP_REFERER'))
 
 def wishlist_remove(request,slug):
-    product = get_object_or_404(Product, slug=slug)
+    product = get_object_or_404(Products, slug=slug)
     Wishlist.objects.filter(product=product, user=request.user).delete()
     messages.success(request, 'Product removed from wishlist')
     # back to same page

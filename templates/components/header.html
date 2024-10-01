@@ -1,17 +1,35 @@
 {% load cart_tags %}
+<div class="container-fluid bg-black">
+<h6 class="text-white text-center p-3">Get Extra 5% with Code : EXTRA5 | Shop Now. </h6>
+</div>
+<div class="container-fluid ">
+<div class="row">
+    <div class="col d-flex justify-content-center ">
+        <div class="col col-sm-2   "><a href="" class="text-decoration-none text-black"><i class="bi bi-patch-question-fill p-1"></i>Help</a></div>
+        <div class="col col-sm-4  "><a href="" class="text-decoration-none text-black"><i class="bi bi-geo-alt-fill text-black p-1"></i>Track Orders</a></div>
+    </div>
+    <div class="col d-flex justify-content-center me-3">
+        <div class="col col-sm-4 "><a href="" class="text-decoration-none text-black "><i class="bi bi-binoculars-fill p-1"></i>Find a Seller</a></div>
+        <div class="col col-sm-4  "><a href="" class="text-decoration-none text-black"><i class="bi bi-gift-fill p-1"></i>Gift Crads</a></div>
+    </div>
+</div>
+</div>  
+<div class="container-fluid mt-3">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="#">DJ Ecommerce</a>
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" height="50" alt="timbertreasures">
+          </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation">
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link active" href="#" aria-current="page">Home <span
                             class="visually-hidden">(current)</span></a>
-                </li>
+                </li> -->
                 {% comment %}
                 {% if user.is_authenticated and user.groups.all.0.name == 'seller' %}
                 <li class="nav-item">
@@ -22,11 +40,9 @@
                 </li>
                 {% endif %}
                 {% endcomment %}
-
-
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="{% url 'product_list' %}">Products</a>
-                </li>
+                </li> -->
             </ul>
             <form class="d-flex my-2 my-lg-0">
                 <input class="form-control me-sm-2" type="text" placeholder="Search" />
@@ -47,6 +63,9 @@
 
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link px-2" href="{% url 'wishlist' %}" title="wishlist">
+                        <i class="bi bi-heart-fill"></i>
                 {% if user.is_superuser %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}" title="dashboard">
@@ -93,3 +112,15 @@
     </div>
 
 </nav>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"><a href="" class="text-decoration-none text-black">New Arrivals</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Sofas & Recliners</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Bedroom</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Dinning</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Stoarage</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Study</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Home Decore</a></div>
+        <div class="col"><a href="" class="text-decoration-none text-black">Deals</a></div>
+</div>
