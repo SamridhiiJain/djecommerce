@@ -3,9 +3,8 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container">
-    <div class="row ">
-        <form action="{% url 'category_create' %}" 
-            method="post" enctype="multipart/form-data">
+    <div class="row">
+        <form action="{% url 'category_create' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form|crispy }}
             <button class="btn btn-primary">
@@ -13,18 +12,32 @@
             </button>
         </form>
     </div>
-        <div class="col">
-            {% for item in categories %}
-            <div class="card my-3 p-4 rounded-4" style="width: 200px; height: 200px;">
-                <img src="{{item.logo.url}}" 
-                alt="logo" width="150" height="150"
-                class="rounded-4">
-                <h5 class="text-center">{{ item.name }}</h5>
+    <div class="row">
+        {% for item in categories %}
+        <div class="col-md-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{item.logo.url}}" alt="logo" width="100" height="100" class="rouded-5">
+                    <a href="{% url 'product_list_by_category' item.slug %}">
+                        {{ item.name }}
+                    </a>
+
+                </div>
+                <div class="card-footer ">
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'category_edit' item.slug %}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="{% url 'category_delete' item.slug %}">
+                            <i class="fas fa-trash text-danger"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            {% empty %}
-                <h4>No category available</h4>
-            {% endfor %}
         </div>
+        {% empty %}
+        <h4>No category available</h4>
+        {% endfor %}
     </div>
 </div>
 {% endblock content %}
