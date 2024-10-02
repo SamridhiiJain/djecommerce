@@ -5,26 +5,26 @@
 <div class="container-fluid ">
 <div class="row">
     <div class="col d-flex justify-content-center ">
-        <div class="col col-sm-2   "><a href="" class="text-decoration-none text-black"><i class="bi bi-patch-question-fill p-1"></i>Help</a></div>
-        <div class="col col-sm-4  "><a href="" class="text-decoration-none text-black"><i class="bi bi-geo-alt-fill text-black p-1"></i>Track Orders</a></div>
+        <div class="col col-sm-2   "><a href="" class="text-decoration-none text1 "><i class="bi bi-patch-question-fill p-1 text1 "></i>Help</a></div>
+        <div class="col col-sm-4  "><a href="" class="text-decoration-none text1"><i class="bi bi-geo-alt-fill  p-1 text1"></i>Track Orders</a></div>
     </div>
     <div class="col d-flex justify-content-center me-3">
-        <div class="col col-sm-4 "><a href="" class="text-decoration-none text-black "><i class="bi bi-binoculars-fill p-1"></i>Find a Seller</a></div>
-        <div class="col col-sm-4  "><a href="" class="text-decoration-none text-black"><i class="bi bi-gift-fill p-1"></i>Gift Crads</a></div>
+        <div class="col col-sm-4 "><a href="" class="text-decoration-none text1"><i class="bi bi-binoculars-fill p-1"></i>Find a Seller</a></div>
+        <div class="col col-sm-4  "><a href="" class="text-decoration-none text1"><i class="bi bi-gift-fill p-1"></i>Gift Crads</a></div>
     </div>
 </div>
 </div>  
 <div class="container-fluid mt-3">
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="/assets/images/logo.png" width="170" height="50" alt="">
+            TimberTreasures
         </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <!-- <li class="nav-item">
                     <a class="nav-link active" href="#" aria-current="page">Home <span
@@ -46,7 +46,7 @@
             </ul>
             <form class="d-flex my-2 my-lg-0">
                 <input class="form-control me-sm-2 searchbar" type="text" placeholder="Search" />
-                <button class="searchbutton btn btn-outline-dark my-2 my-sm-0" type="submit">
+                <button class="searchbutton btn  my-2 my-sm-0" type="submit">
                     Search
                 </button>
             </form>
@@ -94,16 +94,16 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a href="{% url 'seller_login' %}" class="nav-link me-5 text-black ">Seller Login</a>
+                    <a href="{% url 'seller_login' %}" class="nav-link me-5">Seller Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}" title="login">
-                        <i class="fas fa-sign-in-alt text-black"></i>
+                        <i class="fas fa-sign-in-alt icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'register' %}" title="register">
-                        <i class="fas fa-user-plus text-black"></i>
+                        <i class="fas fa-user-plus icon"></i>
                     </a>
                 </li>
                 {% endif %}
@@ -115,12 +115,12 @@
 </div>
 <div class="container-fluid">
     <div class="row  ">
-        <div class="col"><a href="" class=" text-decoration-none text-black">New Arrivals</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black ">Sofas & Recliners</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Bedroom</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Dinning</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Stoarage</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Study</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Home Decore</a></div>
-        <div class="col"><a href="" class="text-decoration-none text-black">Deals</a></div>
+        <div class="col"><a href="" class=" text">New Arrivals</a></div>
+        <div class="col"><a href="" class=" text">Sofas & Recliners</a></div>
+        <div class="col"><a href="" class="text">Bedroom</a></div>
+        <div class="col"><a href="" class="text">Dinning</a></div>
+        <div class="col"><a href="" class="text">Stoarage</a></div>
+        <div class="col"><a href="" class="text">Study</a></div>
+        <div class="col"><a href="" class="text">Home Decore</a></div>
+        <div class="col"><a href="" class="text">Deals</a></div>
 </div>
