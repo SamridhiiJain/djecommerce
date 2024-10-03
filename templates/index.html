@@ -1,7 +1,7 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-4">
 <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -33,11 +33,11 @@
   </div>
 </div>
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-4">
     <h2 class="text-center m-4">Explore Our Furniture Range</h2>
 </div>
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-4">
     <div id="cardCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -131,18 +131,20 @@
     </div>
     
 </div>
-
-
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-4 ">
     <h2 class="text-center">Shop By Room</h2>
-    <div class="container mt-3">
+</div>
+<div class="container-fluid mt-4">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card card1">
+                    <a href="{% url 'livingroom' %}">
                     <img src="https://plus.unsplash.com/premium_photo-1684338795288-097525d127f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="Image 1">
                     <div class="overlay">
                       <h6>Living Room</h6></p>
                     </div>
+                </a>
                 </div>
             </div>
             <div class="col">
@@ -191,10 +193,13 @@
     </div>
     
 </div>
-<div class="container-fluid mt-3 mb-3">
+<div class="conatiner-fluid mt-4">
     <h2 class="text-center">Beautify Your Living Spaces </h2>
     <h6 class="text-center">Revamp Every Corner with Elegance</h6>
-    <div class="container mt-3">
+</div>
+<div class="container-fluid mt-4">
+   
+    <div class="container mt-4">
         <div class="row">
             <div class="col">
                 <div class="card card1">
@@ -223,8 +228,11 @@
         </div>
     
 </div>
-<div class="container-fluid mt-3"></div>
+<div class="container-fluid mt-4">
     <h2 class="text-center">Visit Our Stores Across India</h2>
+</div>
+<div class="container-fluid mt-4">
+  
      <div class="row mt-3">
         <div class="col-sm-4">
             <div class="card">
@@ -275,5 +283,13 @@
             </div>
         </div>
      </div>
+</div>
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="https://ii1.pepperfry.com/assets/f944c567-5813-4809-bcc7-0fa2654a651e.jpg" alt="">
+        </div>
+    </div>
+   
 </div>
 {% endblock content %}

@@ -24,4 +24,16 @@ urlpatterns = [
     path('wishlist/add/<slug:slug>/', wishlist_add, name='wishlist_add'),
     path('wishlist/remove/<slug:slug>/', wishlist_remove, name='wishlist_remove'),
 
+    #####product pages###########
+    path('/products/LivingRoom' , view_livingroom, name="livingroom"),
+    path('/products/Bedroom' , view_bedroom, name="bedroom"),
+    path('/products/diningroom' , view_diningroom, name="diningroom"),
+    path('/products/studyroom' , view_studyroom, name="studyroom"),
+    path('/products/kidsroom' , view_kidsroom, name="kidsroom"),
+    path('/products/outdoor' , view_outdoor, name="outdoor"),
+    path('/products/homedecor' , view_homedecor, name="homedecor"),
+    path('/products/lamps&lightings' , view_lamps, name="lamps"),
+
+    
+
 ]
