@@ -116,12 +116,13 @@
 </div>
 <div class="container-fluid">
     <div class="row  ">
-        <div class="col"><a href="" class=" text">New Arrivals</a></div>
-        <div class="col"><a href="" class=" text">Sofas & Recliners</a></div>
-        <div class="col"><a href="" class="text">Bedroom</a></div>
-        <div class="col"><a href="" class="text">Dinning</a></div>
+        <div class="col"><a href="{% url 'index' %}" class="text">Home</a></div>
+        <!-- <div class="col"><a href="" class=" text">New Arrivals</a></div> -->
+        <div class="col"><a href="{% url 'livingroom' %}" class=" text">Sofas & Recliners</a></div>
+        <div class="col"><a href="{% url 'bedroom' %}" class="text">Bedroom</a></div>
+        <div class="col"><a href="{% url 'diningroom' %}" class="text">Dinning</a></div>
         <div class="col"><a href="" class="text">Stoarage</a></div>
-        <div class="col"><a href="" class="text">Study</a></div>
-        <div class="col"><a href="" class="text">Home Decore</a></div>
-        <div class="col"><a href="" class="text">Deals</a></div>
+        <div class="col"><a href="{% url 'studyroom' %}" class="text">Study</a></div>
+        <div class="col"><a href="{% url 'homedecor' %}" class="text">Home Decore</a></div>
+        
 </div>
